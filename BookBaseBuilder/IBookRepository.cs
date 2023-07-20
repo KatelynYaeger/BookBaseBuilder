@@ -7,6 +7,7 @@ namespace BookBaseBuilder
 	{
 		public IEnumerable<Book> GetAllBooks();
 		public Book GetBook(int id);
+		public void UpdateBook(Book book);
 	}
 }
 

@@ -25,6 +25,13 @@ namespace BookBaseBuilder
             return _conn.QuerySingle<Book>("SELECT BOOKID, TITLE, AUTHOR, CHARACTERISTICS FROM ATTRIBUTES WHERE BOOKID = @id",
                 new { id = id });
         }
+
+        public void UpdateBook(Book book)
+        {
+            _conn.Execute("UPDATE books SET Title = @title, Author = @author, Characteristics = @characteristics WHERE BookID = @id",
+                new { name = book.Title, price = book.Author, characteristics = book.Characteristics, id = book.BookID , });
+
+        }
     }
 }
 

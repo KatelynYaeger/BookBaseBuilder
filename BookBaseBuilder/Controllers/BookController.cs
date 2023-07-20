@@ -29,6 +29,24 @@ namespace BookBaseBuilder.Controllers
             return View(book);
         }
 
+        public IActionResult UpdateBook(int id)
+        {
+            Book book = repo.GetBook(id);
+
+            if (book == null)
+            {
+                return View("BookNotFound");
+            }
+
+            return View(book);
+        }
+        public IActionResult UpdateBookToDatabase(Book book)
+        {
+            repo.UpdateBook(book);
+
+            return RedirectToAction("ViewBook", new { id = book.BookID });
+        }
+
 
     }
 }
