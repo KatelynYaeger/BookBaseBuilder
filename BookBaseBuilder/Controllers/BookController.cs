@@ -21,6 +21,15 @@ namespace BookBaseBuilder.Controllers
 
             return View(books);
         }
+
+        public IActionResult ViewBook(int id)
+        {
+            var book = repo.GetBook(id);
+
+            return View(book);
+        }
+
+
     }
 }
 

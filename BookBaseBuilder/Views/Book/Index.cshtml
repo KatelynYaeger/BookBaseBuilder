@@ -12,10 +12,10 @@
     @foreach (var book in Model)
     {
         <tr>
-            <td>@book.BookID</td>
-            <td>@book.Title</td>
-            <td>@book.Author</td>
-            <td>@book.Characteristics</td>
+            <td><a href=/Book/ViewBook/@book.BookID>@book.BookID</a></td>
+            <td><a href=/Book/ViewBook/@book.Title>@book.Title</a></td>
+            <td><a href=/Book/ViewBook/@book.Author>@book.Author</a></td>
+            <td><a href=/Book/ViewBook/@book.Characteristics>@book.Characteristics</a></td>
         </tr>
 
     }

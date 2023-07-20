@@ -6,6 +6,7 @@ namespace BookBaseBuilder
 	public interface IBookRepository
 	{
 		public IEnumerable<Book> GetAllBooks();
+		public Book GetBook(int id);
 	}
 }
 

@@ -19,6 +19,12 @@ namespace BookBaseBuilder
         {
             return _conn.Query<Book>("SELECT BOOKID, TITLE, AUTHOR, CHARACTERISTICS FROM ATTRIBUTES;");
         }
+
+        public Book GetBook(int id)
+        {
+            return _conn.QuerySingle<Book>("SELECT BOOKID, TITLE, AUTHOR, CHARACTERISTICS FROM ATTRIBUTES WHERE BOOKID = @id",
+                new { id = id });
+        }
     }
 }
 
