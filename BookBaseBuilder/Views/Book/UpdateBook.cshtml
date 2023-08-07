@@ -14,10 +14,14 @@
 
     <input type="number" step="0.01" name="Author" class="form-control" value="@Model.Author" />
 
+    <label asp-for="Genre" class="control-label">Genre</label>
+
+    <input type="number" step="0.01" name="Genre" class="form-control" value="@Model.Genre" />
+
     <label asp-for="Characteristics" class="control-label">Characteristics</label>
 
     <input type="number" step="0.01" name="Characteristics" class="form-control" value="@Model.Characteristics" />
 
-    <input type="submit" value="Update Product" class="btn btn-primary" />
+    <input type="submit" value="Update Book" class="btn btn-primary" />
 
 }

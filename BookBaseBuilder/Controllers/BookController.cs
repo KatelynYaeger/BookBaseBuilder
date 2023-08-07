@@ -47,7 +47,19 @@ namespace BookBaseBuilder.Controllers
             return RedirectToAction("ViewBook", new { id = book.BookID });
         }
 
+        public IActionResult InsertBook()
+        {
+            var novel = new Book();
 
+            return View();
+        }
+
+        public IActionResult InsertBookToDatabase(Book bookToInsert)
+        {
+            repo.InsertBook(bookToInsert);
+
+            return RedirectToAction("Index");
+        }
     }
 }
 

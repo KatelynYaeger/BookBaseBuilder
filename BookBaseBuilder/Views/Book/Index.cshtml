@@ -1,20 +1,27 @@
 ﻿@model IEnumerable<Book>
 
 <h2>Books</h2>
+
+<div style="display: block">
+    <a href="/Book/InsertBook/">Add a Book</a>
+</div>
+
 <table class="table">
     <tr>
         <th>BookID</th>
         <th>Title</th>
         <th>Author</th>
+        <td>Genre</td>
         <th>Characteristics</th>
     </tr>
 
     @foreach (var book in Model)
     {
         <tr>
-            <td>@book.BookID</td>
-            <td><a href=/Book/ViewBook/@book.Title>@book.Title</a></td>
+            <td><a href=/Book/ViewBook/@book.BookID>@book.BookID</td>
+            <td>@book.Title</td>
             <td>@book.Author</td>
+            <td>@book.Genre</td>
             <td>@book.Characteristics</td>
         </tr>
 
