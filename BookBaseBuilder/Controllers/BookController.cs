@@ -60,6 +60,14 @@ namespace BookBaseBuilder.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public IActionResult DeleteBook(Book book)
+        {
+            repo.DeleteBook(book);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
 

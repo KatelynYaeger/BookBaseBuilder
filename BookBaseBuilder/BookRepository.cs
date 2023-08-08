@@ -39,6 +39,13 @@ namespace BookBaseBuilder
     new { title = bookToInsert.Title, author = bookToInsert.Author, genre = bookToInsert.Genre, characteristics = bookToInsert.Characteristics });
 
         }
+
+        public void DeleteBook(Book book)
+        {
+            _conn.Execute("DELETE FROM Attributes WHERE Bookid = @id;",
+                                       new { id = book.BookID });
+
+        }
     }
 }
 

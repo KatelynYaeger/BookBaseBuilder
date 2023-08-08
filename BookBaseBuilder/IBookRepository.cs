@@ -10,6 +10,7 @@ namespace BookBaseBuilder
 		public Book GetBook(int id);
 		public void UpdateBook(Book book);
         public void InsertBook(Book bookToInsert);
+		public void DeleteBook(Book book);
     }
 }
 
