@@ -28,8 +28,8 @@ namespace BookBaseBuilder
 
         public void UpdateBook(Book book)
         {
-            _conn.Execute("UPDATE books SET Title = @title, Author = @author, Genre = @genre, Characteristics = @characteristics WHERE BookID = @id",
-                new { name = book.Title, price = book.Author, genre = book.Genre, characteristics = book.Characteristics, id = book.BookID , });
+            _conn.Execute("UPDATE attributes SET Title = @title, Author = @author, Genre = @genre, Characteristics = @characteristics WHERE BookID = @id",
+                new { title = book.Title, author = book.Author, genre = book.Genre, characteristics = book.Characteristics, id = book.BookID , });
 
         }
 
