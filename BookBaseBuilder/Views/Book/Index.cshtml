@@ -13,6 +13,7 @@
         <th>Author</th>
         <td>Genre</td>
         <th>Characteristics</th>
+        <th>ISBN</th>
     </tr>
 
     @foreach (var book in Model)
@@ -23,6 +24,7 @@
             <td>@book.Author</td>
             <td>@book.Genre</td>
             <td>@book.Characteristics</td>
+            <td>@book.ISBN</td>
         </tr>
 
     }
