@@ -18,5 +18,44 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url("../Bookshelf4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: black;
+}
+
+.table {
+    background-color: white;
+    color: black;
+}
+
+h3 {
+    color: #0077cc;
+}
+
+.control-label {
+    background-color: #0077cc;
+    color:white ;
+}
+
+.button {
+    background-color: #0077cc;
+    color: white;
+}
+
+.update {
+    background-color: #0077cc;
+    color: white;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    text-align: center;
 }
